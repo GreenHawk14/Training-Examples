@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -14,12 +16,15 @@ const val KEY_MOVIE_ITEM: String = "MainActivity_KEY_MOVIE_ITEM"
 class MainActivity : AppCompatActivity() {
 
 
+    lateinit var recyclerview: RecyclerView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        recyclerview = findViewById(R.id.recycler_view_movie)
         getMovies()
-
     }
+
     private fun getMovies(){
 
         MoviesApi.initRetrofit().getMovies().enqueue(
@@ -31,8 +36,12 @@ class MainActivity : AppCompatActivity() {
                 ) {
                     if (response.isSuccessful) {
                         response.body()?.let {
-                            //todo update the RV
-                            Log.d(TAG, "onResponse: ${it.size}")
+                            recyclerview.layoutManager=
+                                    GridLayoutManager(this@MainActivity,
+                                    2)
+                            recyclerview.adapter =
+                                    MovieAdapter(it,
+                                    ::openActivityDetails)
                         }
                     }
                 }
