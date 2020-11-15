@@ -34,6 +34,13 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
 
         Music_display = findViewById(R.id.music_short_view)
         genre_tab.addOnTabSelectedListener(this)
+
+        refresh_swiper.setOnRefreshListener {
+            findMymusic(localApi)
+        }
+
+        localApi = MusicApi.initRetrofit()::findRockmusic
+        findMymusic(localApi)
     }
 
     private fun openActivityDetails(music: SongItem)
@@ -100,7 +107,7 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
                 }
             })
 
-        Toast.makeText(this,"Making the call",Toast.LENGTH_LONG).show()
+
         MusicApi.initRetrofit().findClassicmusic().enqueue(
             object: Callback<ResultResponse> {
 
@@ -141,7 +148,7 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
                 classicLocal -> localApi = MusicApi.initRetrofit()::findClassicmusic
                 popLocal -> localApi = MusicApi.initRetrofit()::findPopmusic
             }
-        Toast.makeText(this,"Call is being made",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this,"Calling server",Toast.LENGTH_SHORT).show()
         findMymusic(localApi)
     }
 
