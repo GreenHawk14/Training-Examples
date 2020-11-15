@@ -21,7 +21,8 @@ val activityCallback: (movie: MovieItem) -> Unit): RecyclerView.Adapter<MovieAda
             movieView.setOnClickListener{
                 openDetailCallback.invoke(movieItem)
             }
-            Picasso.get().load(movieItem.image).into(posterImage)
+            //Picasso.get().load(movieItem.image).into(posterImage)
+            posterImage.showPoster(movieItem.image)
         }
     }
 

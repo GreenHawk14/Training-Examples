@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -57,11 +58,23 @@ class MainActivity : AppCompatActivity() {
             }
         )
     }
+    //click event class
     private fun openActivityDetails(movieItem: MovieItem)
     {
-        val intent = Intent()
-        intent.setClass(this,DetailActivity::class.java)
-        intent.putExtra(KEY_MOVIE_ITEM, movieItem)
-        startActivity(intent)
+        if(findViewById<FrameLayout>(R.id.fragment_detail_container) == null)
+        {
+            val intent = Intent()
+            intent.setClass(this,DetailActivity::class.java)
+            intent.putExtra(KEY_MOVIE_ITEM, movieItem)
+            startActivity(intent)
+        }
+        else {
+            val fragment = DetailFragment.newInstance(movieItem)
+            supportFragmentManager.beginTransaction().
+                    replace(R.id.fragment_detail_container,
+                    fragment)
+                    .commit()
+        }
+
     }
 }
