@@ -13,50 +13,60 @@
         android:layout_height="80sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars"/>
-    <RelativeLayout
+        tools:src="@tools:sample/avatars" />
+    <LinearLayout
         android:id="@+id/Rl_collection"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         app:layout_constraintTop_toTopOf="@id/iv_artwork"
         app:layout_constraintEnd_toEndOf="@id/iv_artwork"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/tv_CollectionName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:lines="2"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/tv_artistName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:gravity="top"/>
 
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/track_price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        app:layout_constraintTop_toTopOf="@id/Rl_collection"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="?attr/colorSecondaryVariant"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="81dp"
-        android:textStyle="bold"/>
+        tools:text="1.29" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".4"/>
+        app:layout_constraintGuide_percent="0.66" />
 
+    <TextView
+        android:id="@+id/tv_CollectionName"
+        android:layout_width="45dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="4dp"
+        android:lines="2"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_artwork"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="album" />
+
+    <TextView
+        android:id="@+id/tv_artistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_artwork"
+        app:layout_constraintTop_toBottomOf="@+id/tv_CollectionName"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="mock" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
