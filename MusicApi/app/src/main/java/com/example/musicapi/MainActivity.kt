@@ -33,8 +33,11 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
         setContentView(R.layout.activity_main)
 
         Music_display = findViewById(R.id.music_short_view)
+
+        //Listens when the user clicks on the tab
         genre_tab.addOnTabSelectedListener(this)
 
+        //allows user to scroll down to refresh the recycler.
         refresh_swiper.setOnRefreshListener {
             findMymusic(localApi)
         }
@@ -45,6 +48,7 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
 
     private fun openActivityDetails(music: SongItem)
     {
+        //Intent needed to play each track.
         val intent = Intent()
         intent.action = Intent.ACTION_VIEW
         intent.setDataAndType(Uri.parse(music.previewUrl),"audio/mp3")
@@ -53,6 +57,7 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
     }
     private fun findMymusic(Api: () -> Call<ResultResponse>)
     {
+        //Calling MusicApi, if success lists details of each linked http links for library
         MusicApi.initRetrofit().findRockmusic().enqueue(
             object: Callback<ResultResponse> {
 
@@ -142,6 +147,7 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
     }
     override fun onTabSelected(tab: TabLayout.Tab?)
     {
+        // allows the applicatoin to communicate with the adapter.
             when(tab?.text)
             {
                 rockLocal -> localApi = MusicApi.initRetrofit()::findRockmusic

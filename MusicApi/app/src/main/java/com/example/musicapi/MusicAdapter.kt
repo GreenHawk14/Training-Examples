@@ -11,6 +11,7 @@ import com.squareup.picasso.Picasso
 class MusicAdapter(private val dataSet: ResultResponse, private val callback: (track: SongItem) -> Unit):
     RecyclerView.Adapter<MusicAdapter.ViewHolder>(){
 
+    // Variables able to communicate with the view/items for the user.
     class ViewHolder( val musicItem: View):
         RecyclerView.ViewHolder(musicItem)
     {

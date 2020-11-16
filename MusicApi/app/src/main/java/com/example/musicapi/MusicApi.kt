@@ -7,6 +7,8 @@ import retrofit2.http.GET
 
 interface MusicApi {
 
+    //Commutes the information needed to pass through the application
+
         @GET("https://itunes.apple.com/search?term=rock&amp;amp;media=music&amp;amp;entity=song&amp;amp;limit=50")
         fun findRockmusic(): Call<ResultResponse>
         //Rock Listing
