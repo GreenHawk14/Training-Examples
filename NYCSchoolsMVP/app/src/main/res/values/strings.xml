@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NYCSchoolsMVP</string>
+    <string name="tv_text_num_of_sat_test_takers">Num of Sat Test Takers:</string>
+    <string name="tv__text_sat_critical_reading_avg">Sat Critical Reading Avg:</string>
+    <string name="tv_text_sat_math_avg">SAT MATH AVG:</string>
+    <string name="tv_test_sat_writing_avg">SAT Writing AVG:</string>
+</resources>
