@@ -4,4 +4,6 @@
     <string name="tv__text_sat_critical_reading_avg">Sat Critical Reading Avg:</string>
     <string name="tv_text_sat_math_avg">SAT MATH AVG:</string>
     <string name="tv_test_sat_writing_avg">SAT Writing AVG:</string>
+    <string name="url_sat">https://data.cityofnewyork.us/resource/s3k6-pzi2.json</string>
+    <string name="url_schools">https://data.cityofnewyork.us/resource/f9bf-2cp4.json</string>
 </resources>
