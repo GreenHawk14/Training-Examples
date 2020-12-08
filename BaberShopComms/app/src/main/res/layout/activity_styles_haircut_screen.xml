@@ -5,8 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pngkey_com_fancy_border_png_58125"
-    android:backgroundTint="?attr/colorOnBackground"
+    android:background="@drawable/d7hftxdivxxvm_cloudfront_net"
+    android:backgroundTint="#A6FFFFFF"
+    android:backgroundTintMode="add"
     android:orientation="vertical"
     tools:context=".StylesHaircutscreen">
 
@@ -43,7 +44,7 @@
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/images"
-                android:backgroundTint="#56AEB0B5"
+                android:backgroundTint="#5658688F"
                 android:backgroundTintMode="add"
                 android:hint="Haircut"
                 android:textColorHint="#000000"
@@ -55,7 +56,7 @@
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/images1"
-                android:backgroundTint="#57AEA3A3"
+                android:backgroundTint="#579F7676"
                 android:backgroundTintMode="add"
                 android:hint="Style"
                 android:textColorHint="#000000"
@@ -68,7 +69,7 @@
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/_1fji42zb5l__ac_sy200_"
-                android:backgroundTint="#72BFB1B1"
+                android:backgroundTint="#7E756044"
                 android:backgroundTintMode="add"
                 android:hint="Braids\n/Dreadlocs"
                 android:textColorHint="#000000"
@@ -80,7 +81,7 @@
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/noshavenovember_7_200x200"
-                android:backgroundTint="#5CBCB0B0"
+                android:backgroundTint="#5C8F9F78"
                 android:backgroundTintMode="add"
                 android:hint="Trim\n/Touch-up"
                 android:textColorHint="#000000"
@@ -92,7 +93,7 @@
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/finishing_touches_chuck_styles"
-                android:backgroundTint="#5CBCB0B0"
+                android:backgroundTint="#2D2E9191"
                 android:backgroundTintMode="add"
                 android:text="Dyes/Coloring"
                 android:textColor="#000000"
@@ -106,7 +107,6 @@
         android:id="@+id/txtDescription"
         android:layout_width="382dp"
         android:layout_height="200dp"
-        android:layout_marginTop="20dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="additional Information"
@@ -115,14 +115,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_CustName" />
 
     <EditText
         android:id="@+id/txtBarberSpecial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="specify stylist / barber"
         android:inputType="textPersonName"
@@ -134,8 +134,8 @@
         android:id="@+id/btn_date"
         android:layout_width="96dp"
         android:layout_height="76dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
         android:background="@android:drawable/ic_lock_idle_alarm"
         android:text="When?"
         android:textAlignment="center"
@@ -148,11 +148,11 @@
         android:id="@+id/dateDisplay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="40dp"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintEnd_toStartOf="@+id/btnSend_appsetup"
+        app:layout_constraintHorizontal_bias="0.141"
         app:layout_constraintStart_toEndOf="@+id/btn_date"
         app:layout_constraintTop_toBottomOf="@+id/txtBarberSpecial" />
 
@@ -170,6 +170,18 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_CustName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

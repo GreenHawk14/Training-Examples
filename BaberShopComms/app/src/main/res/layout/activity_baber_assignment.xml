@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/finishing_touches_chuck_styles"
+    android:backgroundTint="#90DCD554"
+    android:backgroundTintMode="add"
     tools:context=".BarberAssignment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -36,6 +38,6 @@
         app:layout_constraintBottom_toTopOf="@+id/Rv_assignments"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.396" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

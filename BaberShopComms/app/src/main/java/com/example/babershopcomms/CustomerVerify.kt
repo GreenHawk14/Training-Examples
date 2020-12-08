@@ -70,14 +70,7 @@ class CustomerVerify : AppCompatActivity() {
     //the country id is concatenated
     //you can take the country id as user input as well
     private fun sendVerificationCode(no: String) {
-        /*
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-            no,     //phone number to verify
-            60,     //Timeout duration
-            TimeUnit.SECONDS,   //Unit of Timeout
-            this,               //Activity for callback binding
-            mCallbacks )       //OnVerificationChange Callbacks
-*/
+
         val options = PhoneAuthOptions.newBuilder(mAuth!!)
             .setPhoneNumber(no)       // Phone number to verify
             .setTimeout(120L, TimeUnit.SECONDS) // Timeout and unit
@@ -126,41 +119,6 @@ class CustomerVerify : AppCompatActivity() {
     private fun enableUserManuallyInputCode() {
         //No-op
     }
-
-
-//    //the callback to detect the verification status
-//    private var mCallbacks: OnVerificationStateChangedCallbacks =
-//        object : OnVerificationStateChangedCallbacks() {
-//            override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
-//                Log.d(TAG, "onVerificationCompleted: ")
-//
-//                //Getting the code sent by SMS
-//                val code = phoneAuthCredential.smsCode
-//
-//                //sometime the code is not detected automatically
-//                //in this case the code will be null
-//                //so user has to manually enter the code
-//                if (code != null) {
-//                    editTextCode.setText(code)
-//                    //verifying the code
-//                    verifyVerificationCode(code)
-//                }
-//            }
-//
-//            override fun onVerificationFailed(e: FirebaseException) {
-//                Log.d(TAG, "onVerificationFailed: ")
-//                Toast.makeText(this@CustomerVerify, e.message, Toast.LENGTH_LONG).show()
-//            }
-//
-//            override fun onCodeSent(s: String, forceResendingToken: ForceResendingToken) {
-//                super.onCodeSent(s, forceResendingToken)
-//
-//                //storing the verification id that is sent to the user
-//                mVerificationId = s
-//                Log.d("Code Sent Cred: ", "$s")
-//                //Log.d("onCodeSent", "ForceToken: \n $forceResendingToken")
-//            }
-//        }
 
     private fun verifyVerificationCode(code: String) {
         //creating the credential
