@@ -22,11 +22,6 @@ class MainActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
 
     lateinit var Music_display: RecyclerView
 
-    private fun record(SongItem: SongItem)
-    {
-
-    }
-
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)

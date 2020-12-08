@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "199860988583-i2aoc2pvni4ud7aiptle0cfv44jj3ed3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.babershopcomms",
+            "certificate_hash": "f062ef1d68e0cfbe63a491704937ea65ba90c8b1"
+          }
+        },
+        {
           "client_id": "199860988583-pldo42iet8dvvq0cv3lt9s9edmeilaou.apps.googleusercontent.com",
           "client_type": 3
         }

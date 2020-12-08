@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.FirebaseException
@@ -22,7 +23,7 @@ class CustomerVerify : AppCompatActivity() {
 
     //These are the objects needed
     //It is the verification id that will be sent to the user
-    private var mVerificationId: String? = null
+    private var mVerificationId: String = " "
 
     //The EditText to input the code
     private lateinit var editTextCode: EditText
@@ -77,17 +78,10 @@ class CustomerVerify : AppCompatActivity() {
             .setActivity(this@CustomerVerify)                 // Activity (for callback binding)
             .setCallbacks(object : OnVerificationStateChangedCallbacks() {
 
-                override fun onCodeSent(
-                    s: String,
-                    forceResendingToken: ForceResendingToken)
-                {
-                    super.onCodeSent(s, forceResendingToken)
-
-                //storing the verification id that is sent to the user
-               mVerificationId = s
-                Log.d("Code Sent Cred: ", "$s")
-                //Log.d("onCodeSent", "ForceToken: \n $forceResendingToken")
-                    this@CustomerVerify.enableUserManuallyInputCode()
+                override fun onCodeSent(verificationId: String, p1: ForceResendingToken) {
+                    Toast.makeText(this@CustomerVerify, "Code Sent", Toast.LENGTH_SHORT)
+                        .show()
+                    mVerificationId = verificationId //Add this line to save //verification Id
                 }
 
                 override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
@@ -95,16 +89,17 @@ class CustomerVerify : AppCompatActivity() {
                     // ...
                     Log.d(TAG, "onVerificationCompleted: ")
 
-                //Getting the code sent by SMS
-                val code = phoneAuthCredential.smsCode
+                    //Getting the code sent by SMS
+                    val code = phoneAuthCredential.smsCode
 
-                //sometime the code is not detected automatically
-                //in this case the code will be null
-                //so user has to manually enter the code
-                if (code != null) {
-                    editTextCode.setText(code)
-                    //verifying the code
-                    verifyVerificationCode(code)
+                    //sometime the code is not detected automatically
+                    //in this case the code will be null
+                    //so user has to manually enter the code
+                    if (code != null) {
+                        editTextCode.setText(code)
+                        //verifying the code
+                        verifyVerificationCode(code)
+                        Log.d(TAG, "onVerificationCompleted:  $code")
                     }
                 }
 
@@ -122,7 +117,7 @@ class CustomerVerify : AppCompatActivity() {
 
     private fun verifyVerificationCode(code: String) {
         //creating the credential
-        val credential = mVerificationId?.let { getCredential(it, code) }
+        val credential = mVerificationId.let { getCredential(it, code) }
 
         //signing the user
         if (credential != null) {
