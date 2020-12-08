@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pngkey_com_fancy_border_png_58125"
-    tools:context=".StylesHaircut_screen"
-    android:orientation="vertical">
+    android:backgroundTint="?attr/colorOnBackground"
+    android:orientation="vertical"
+    tools:context=".StylesHaircutscreen">
 
     <TextView
         android:id="@+id/lbl_Question"
         android:layout_width="211dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="How can we help?"
+        android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,32 +25,151 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <HorizontalScrollView
-        android:layout_width="388dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="52dp"
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="410dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lbl_Question">
 
         <LinearLayout
+            android:id="@+id/Collection"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+            <CheckBox
+                android:id="@+id/HairCut"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/images"
+                android:backgroundTint="#56AEB0B5"
+                android:backgroundTintMode="add"
+                android:hint="Haircut"
+                android:textColorHint="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+            <CheckBox
+                android:id="@+id/HairStyle"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/images1"
+                android:backgroundTint="#57AEA3A3"
+                android:backgroundTintMode="add"
+                android:hint="Style"
+                android:textColorHint="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="InvalidId" />
+
+            <CheckBox
+                android:id="@+id/Dreads_Braids"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/_1fji42zb5l__ac_sy200_"
+                android:backgroundTint="#72BFB1B1"
+                android:backgroundTintMode="add"
+                android:hint="Braids\n/Dreadlocs"
+                android:textColorHint="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/Touch_up"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/noshavenovember_7_200x200"
+                android:backgroundTint="#5CBCB0B0"
+                android:backgroundTintMode="add"
+                android:hint="Trim\n/Touch-up"
+                android:textColorHint="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/dyes_coloring"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/finishing_touches_chuck_styles"
+                android:backgroundTint="#5CBCB0B0"
+                android:backgroundTintMode="add"
+                android:text="Dyes/Coloring"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
         </LinearLayout>
     </HorizontalScrollView>
+
+    <EditText
+        android:id="@+id/txtDescription"
+        android:layout_width="382dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="additional Information"
+        android:inputType="textMultiLine"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+    <EditText
+        android:id="@+id/txtBarberSpecial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="specify stylist / barber"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescription" />
+
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="96dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/ic_lock_idle_alarm"
+        android:text="When?"
+        android:textAlignment="center"
+        android:textColor="#020202"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBarberSpecial" />
+
+    <TextView
+        android:id="@+id/dateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toEndOf="@+id/btn_date"
+        app:layout_constraintTop_toBottomOf="@+id/txtBarberSpecial" />
+
+    <Button
+        android:id="@+id/btnSend_appsetup"
+        android:layout_width="102dp"
+        android:layout_height="92dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@android:drawable/ic_menu_set_as"
+        android:text="Send"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

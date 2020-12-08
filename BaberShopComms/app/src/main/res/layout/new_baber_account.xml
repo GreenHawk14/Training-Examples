@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/masters_at_work_chuck_styles"
+    tools:context=".NewBarberAccount">
+
+<!--    <EditText-->
+<!--        android:id="@+id/txtBarbCode"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="40sp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Password"-->
+<!--        android:inputType="textPersonName"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtBarbEmail" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/txtBarbEmail"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="40sp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Email Address"-->
+<!--        android:inputType="textPersonName"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtBarbeName" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/txtBarbeName"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="40sp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Full name"-->
+<!--        android:inputType="textPersonName"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_add"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:text="Register"-->
+<!--        app:icon="@drawable/abc_vector_test"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="362dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="16dp"
+        android:text="Welcome New Stylists"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="192dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints" />
+
+    <!--    <TextView-->
+<!--        android:id="@+id/textView3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:text="Specialties"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="30sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/txtBarbCode" />-->
+
+<!--    <RadioGroup-->
+<!--        android:id="@+id/SpecialtyGroup"-->
+<!--        android:layout_width="221dp"-->
+<!--        android:layout_height="253dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView3">-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/checkBox"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Dread Locs/ Braids"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="24sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/checkBox2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Barber/ Stylist"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="24sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/checkBox3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Hair coloring/ Bleaching"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="24sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <CheckBox-->
+<!--            android:id="@+id/checkBox4"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Waxing"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:textSize="24sp"-->
+<!--            android:textStyle="bold" />-->
+<!--    </RadioGroup>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btnReturnfromBarberSignUp"-->
+<!--        android:layout_width="128dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:background="@android:drawable/ic_menu_compass"-->
+<!--        android:text="Return to Login"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

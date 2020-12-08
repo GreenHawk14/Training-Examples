@@ -5,48 +5,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/straight_razor_wall_decor_barber_shop_designs"
+    android:foreground="@drawable/barber_clipart_transparent_8_original"
+    android:foregroundTint="#32FFFFFF"
     tools:context=".LoginScreen">
-
-    <EditText
-        android:id="@+id/txt_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.165"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="299dp" />
-
-    <EditText
-        android:id="@+id/txt_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="text"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="224dp" />
 
     <TextView
         android:id="@+id/lbl_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
         android:text="Login into your Account"
         android:textColor="@color/white"
         android:textSize="36sp"
         android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="29dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_login"-->
+<!--        android:layout_width="126dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_marginStart="140dp"-->
+<!--        android:layout_marginBottom="104dp"-->
+<!--        android:background="@android:drawable/btn_radio"-->
+<!--        android:text="Login"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:textColor="#000000"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <Button
+        android:id="@+id/btn_Newbarber"
+        android:layout_width="166dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/ic_menu_mylocation"
+        android:fontFamily="sans-serif-medium"
+        android:text="Barber\n Login"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.795"
+        app:layout_constraintStart_toEndOf="@+id/btn_newClient"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_welcome" />
+
+    <Button
+        android:id="@+id/btn_newClient"
+        android:layout_width="161dp"
+        android:layout_height="145dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="196dp"
+        android:background="@android:drawable/ic_menu_mylocation"
+        android:backgroundTint="#9E3232"
+        android:backgroundTintMode="add"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Customer\n Login"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_welcome" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

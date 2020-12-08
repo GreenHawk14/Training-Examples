@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="MissingDefaultResource">
+        <ignore path="src/main/res/drawable-small/fff45363c1c888331cc2164df2292e77.jpg" />
+        <ignore path="src/main/res/drawable-small/fff45363c1c888331cc2164df2292e77.jpg" />
+        <ignore path="src/main/res/drawable-small/fff45363c1c888331cc2164df2292e77.jpg" />
+        <ignore path="src/main/res/drawable-small/fff45363c1c888331cc2164df2292e77.jpg" />
+        <ignore path="src/main/res/drawable-small/fff45363c1c888331cc2164df2292e77.jpg" />
+        <ignore path="src/main/res/drawable-small/fff45363c1c888331cc2164df2292e77.jpg" />
+    </issue>
+</lint>

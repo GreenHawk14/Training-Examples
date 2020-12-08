@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "199860988583",
+    "firebase_url": "https://barbershopauth93-default-rtdb.firebaseio.com",
+    "project_id": "barbershopauth93",
+    "storage_bucket": "barbershopauth93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199860988583:android:f0e89cdc8d68942bd84982",
+        "android_client_info": {
+          "package_name": "com.example.babershopcomms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199860988583-pldo42iet8dvvq0cv3lt9s9edmeilaou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE6u7qOBTEcXh_YoeQmmlXAzqbh271L68"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199860988583-pldo42iet8dvvq0cv3lt9s9edmeilaou.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
