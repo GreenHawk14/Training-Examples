@@ -24,14 +24,38 @@ TimePickerDialog.OnTimeSetListener{
     var saveHour = 0
     var saveMinutes = 0
 
+    private lateinit var name: EditText
+    private lateinit var adInfo: EditText
+    private lateinit var setdateTime: TextView
+    private lateinit var hairCut: CheckBox
+    private lateinit var styleHair: CheckBox
+    private lateinit var braidsLocs: CheckBox
+    private lateinit var trimShapeup: CheckBox
+    private lateinit var dyeColoring: CheckBox
+    private lateinit var btnSave: Button
+    //private lateinit var databaseRef: Customer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_styles_haircut_screen)
 
+
         pickDate()
+        name = findViewById(R.id.txt_CustName)
+        adInfo = findViewById(R.id.txtDescription)
+        setdateTime = findViewById(R.id.dateDisplay)
+        hairCut = findViewById(R.id.chk_HairCut)
+        styleHair = findViewById(R.id.chk_HairStyle)
+        braidsLocs = findViewById(R.id.chk_Dreads_Braids)
+        trimShapeup = findViewById(R.id.chk_Touch_up)
+        dyeColoring = findViewById(R.id.chk_dyes_coloring)
+        btnSave = findViewById(R.id.btnSend_appsetup)
 
 
+
+        btnSave.setOnClickListener {
+
+        }
     }
 
     private fun pickDate() {
@@ -41,7 +65,7 @@ TimePickerDialog.OnTimeSetListener{
                 getDateTimeCalendar()
 
                 Log.d(TAG, "Date is set... ")
-                DatePickerDialog(this,this,year,month,day).show()
+                DatePickerDialog(this@StylesHaircutscreen,this,year,month,day).show()
 
             }
 

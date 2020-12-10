@@ -79,7 +79,7 @@ class CustomerVerify : AppCompatActivity() {
             .setCallbacks(object : OnVerificationStateChangedCallbacks() {
 
                 override fun onCodeSent(verificationId: String, p1: ForceResendingToken) {
-                    Toast.makeText(this@CustomerVerify, "Code Sent", Toast.LENGTH_SHORT)
+                    Toast.makeText(this@CustomerVerify, "Code Sent! ", Toast.LENGTH_SHORT)
                         .show()
                     mVerificationId = verificationId //Add this line to save //verification Id
                 }
@@ -120,9 +120,7 @@ class CustomerVerify : AppCompatActivity() {
         val credential = mVerificationId.let { getCredential(it, code) }
 
         //signing the user
-        if (credential != null) {
-            signInWithPhoneAuthCredential(credential)
-        }
+        signInWithPhoneAuthCredential(credential)
     }
 
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {

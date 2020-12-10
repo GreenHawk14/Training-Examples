@@ -40,7 +40,7 @@
             android:layout_height="match_parent">
 
             <CheckBox
-                android:id="@+id/HairCut"
+                android:id="@+id/chk_HairCut"
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/images"
@@ -52,7 +52,7 @@
                 android:textStyle="bold" />
 
             <CheckBox
-                android:id="@+id/HairStyle"
+                android:id="@+id/chk_HairStyle"
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/images1"
@@ -65,7 +65,7 @@
                 tools:ignore="InvalidId" />
 
             <CheckBox
-                android:id="@+id/Dreads_Braids"
+                android:id="@+id/chk_Dreads_Braids"
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/_1fji42zb5l__ac_sy200_"
@@ -77,7 +77,7 @@
                 android:textStyle="bold" />
 
             <CheckBox
-                android:id="@+id/Touch_up"
+                android:id="@+id/chk_Touch_up"
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/noshavenovember_7_200x200"
@@ -89,7 +89,7 @@
                 android:textStyle="bold" />
 
             <CheckBox
-                android:id="@+id/dyes_coloring"
+                android:id="@+id/chk_dyes_coloring"
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/finishing_touches_chuck_styles"
