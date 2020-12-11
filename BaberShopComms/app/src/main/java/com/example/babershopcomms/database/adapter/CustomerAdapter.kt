@@ -16,10 +16,12 @@ class customerAdapter (private val dataSet: CustomerResponse, private val callba
     RecyclerView.ViewHolder(customerItem)
 
     {
-        val customerName: TextView = customerItem.findViewById(R.id.txt_CustName)
+        val customerName: TextView = customerItem.findViewById(R.id.txtCust)
         val dateSet: TextView = customerItem.findViewById(R.id.date_txt)
 
         fun onBind(person: personItem, callback: (item: personItem) -> Unit){
+            customerName.text = person.name
+            dateSet.text = person.setdate_time
             customerItem.setOnClickListener{
                 callback.invoke(person)
             }
